@@ -46,4 +46,11 @@ To test that PATH is working correctly, test some common Unix element, like vi:
 		
 And it should give you back both the correct alias and the correct pointer to path. 
 
+To set a generic environmental variable:
+
+`[lib]$ FLUME_HOME=/usr/lib/flume-ng`
+
+`[lib]$ export FLUME_HOME`
+
+`[lib]$ echo $FLUME_HOME`
 
