@@ -27,3 +27,12 @@ histo = df.groupby('column').size()
 plt.figure();
 histo.plot.bar(); plt.axhline(0, color='k')
 ```
+
+### Histogram of all columns in DF, regardless of numeric values
+
+```python
+for colname in df: 
+    histo = df.groupby(colname).size()
+    plt.figure();
+    histo.plot.bar(); plt.axhline(0, color='k')
+```
