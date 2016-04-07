@@ -18,6 +18,14 @@ for column in df:
     print column, df[column].nunique()
 ```
 
+## Statistical Methods
+
+Pairwise correlation of discrete or continuous variables [(methods pearson, kendall, spearman available)](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.corr.html)
+
+```python
+df.corr(method='pearson')["column"]
+```
+
 ## Charting Data
 
 ### Histogram of non-numeric data
