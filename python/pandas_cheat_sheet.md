@@ -17,6 +17,10 @@ df= df.ix[:,:2]
 for column in df:
     print column, df[column].nunique()
 ```
+### Send column names to a list
+
+columns = df.columns.tolist()
+
 
 ## Statistical Methods
 
