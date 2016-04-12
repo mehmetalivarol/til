@@ -37,6 +37,14 @@ Selecting specific index value (instead of by position)
 df1.loc[df1.index == '11/000,028']
 ```
 
+or 
+
+```python
+df3.loc['11/000,028']
+```
+
+
+
 ## Statistical Methods
 
 Pairwise correlation of discrete or continuous variables [(methods pearson, kendall, spearman available)](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.corr.html)
