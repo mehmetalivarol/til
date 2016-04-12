@@ -19,6 +19,24 @@ Flatten heirarchical index into one column (assuming previous index was 2 column
 df4 = pd.DataFrame(df3.to_records())
 ```
 
+Append multiple files in the same directory into a single dictionary where keys are file names and values are dataframes
+(if statement is optional, I use as safeguard to get only specific files from a directory)
+
+```python
+d = {f: pd.read_csv(f) for f in os.listdir(os.getcwd()) if f.endswith(".csv")}
+
+##accessing the dictionary:
+
+for k,v in d.items():
+    print k #filenames
+    print v #dataframes
+
+##accessing specific dataframe: 
+
+d['filename.csv']
+
+```
+
 ## Aggregating Data
 
 
