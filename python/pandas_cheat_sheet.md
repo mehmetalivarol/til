@@ -14,6 +14,11 @@ Keep several groups of columns in a dataframe
 df1 = df[list(df.columns[0:1]) + list(df.columns[10:131])]
 ```
 
+Flatten heirarchical index into one column (assuming previous index was 2 columns)
+```python
+df4 = pd.DataFrame(df3.to_records())
+```
+
 ## Aggregating Data
 
 
