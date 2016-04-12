@@ -8,6 +8,12 @@ Keep only the first two columns in a dataframe
 df= df.ix[:,:2]
 ```
 
+Keep several groups of columns in a dataframe
+
+```python
+df1 = df[list(df.columns[0:1]) + list(df.columns[10:131])]
+```
+
 ## Aggregating Data
 
 
@@ -19,7 +25,9 @@ for column in df:
 ```
 ### Send column names to a list
 
+```python
 columns = df.columns.tolist()
+```
 
 
 ## Statistical Methods
