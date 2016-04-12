@@ -29,6 +29,13 @@ for column in df:
 columns = df.columns.tolist()
 ```
 
+## Selecting Data
+
+Selecting specific index value (instead of by position)
+
+```python
+df1.loc[df1.index == '11/000,028']
+```
 
 ## Statistical Methods
 
