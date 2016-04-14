@@ -52,6 +52,7 @@ for column in df:
 columns = df.columns.tolist()
 ```
 
+
 ## Selecting Data
 
 Selecting specific index value (instead of by position)
@@ -66,7 +67,12 @@ or
 df3.loc['11/000,028']
 ```
 
-
+Group by and order by, SQL-like; two column dataframe 
+```python 
+df2 = pd.DataFrame(df.groupby('column').size().reset_index())
+df2.columns = ['column', 'total']
+df2.sort_values(['column'])
+```
 
 ## Statistical Methods
 
