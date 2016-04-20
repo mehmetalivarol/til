@@ -8,6 +8,11 @@ Keep only the first two columns in a dataframe
 df= df.ix[:,:2]
 ```
 
+Rename columns with regular expressions
+```python
+t.columns = t.columns.str.replace(r'[^\x00-\x7F]+','')
+```
+
 Keep several groups of columns in a dataframe
 
 ```python
