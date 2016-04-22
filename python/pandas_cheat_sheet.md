@@ -79,6 +79,12 @@ df2.columns = ['column', 'total']
 df2.sort_values(['column'])
 ```
 
+Select column from table where column_2 = x
+
+```python
+df[df['column_2'] == '1700']['column'].head(5)
+```
+
 ## Statistical Methods
 
 Pairwise correlation of discrete or continuous variables [(methods pearson, kendall, spearman available)](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.corr.html)
