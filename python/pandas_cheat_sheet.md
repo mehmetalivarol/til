@@ -44,8 +44,13 @@ d['filename.csv']
 
 ## Aggregating Data
 
+### Group by columns
 
-###Get distinct counts of all columns in dataframe:
+```python
+pd.DataFrame({'count' : df.groupby( [ 'column1', 'column2'] ).size()}).reset_index()
+```
+
+### Get distinct counts of all columns in dataframe:
 
 ```python
 for column in df:
