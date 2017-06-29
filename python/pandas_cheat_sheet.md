@@ -53,8 +53,7 @@ pd.DataFrame({'count' : df.groupby( [ 'column1', 'column2'] ).size()}).reset_ind
 ### Get distinct counts of all columns in dataframe:
 
 ```python
-for column in df:
-    print column, df[column].nunique()
+df.nunique()
 ```
 ### Send column names to a list
 
