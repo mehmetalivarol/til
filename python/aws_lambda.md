@@ -22,7 +22,7 @@ def lambda_handler(event, context):
     bucket_name = record['s3']['bucket']['name'] # bucket 
     key = record['s3']['object']['key'] # filename
     
-    tmp_dir = '/tmp/'
+    tmp_dir = tempfile.gettempdir()
 
     # tmp_dir + filename
     path = os.path.join(tempfile.gettempdir(), key)
