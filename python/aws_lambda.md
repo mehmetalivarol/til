@@ -1,6 +1,5 @@
 AWS Lambdas have [in-memory filesystems](https://docs.aws.amazon.com/lambda/latest/dg/limits.html) (512 MB)  
-that you can use for the duration of the lambda runtime. They're useful for file manipulation outside of S3. I had a case where I needed to 
-zip a small code file in S3, and the lambda was the perfect way to do that. 
+that you can use for the duration of the lambda runtime. They're useful for file manipulation outside of S3. I had a case where I needed to zip a small piece of code from a file in S3, and store the resulting archive in S3, and the lambda was the perfect way to do that. 
 
 
 ```python
