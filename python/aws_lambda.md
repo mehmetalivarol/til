@@ -40,7 +40,7 @@ def lambda_handler(event, context):
     # move file to archive
     with zipfile.ZipFile(archive, 'w')  as myzip:
         myzip.write(path,key) #don't want to nest folders
-        print(zipfile.ZipFile.namelist(myzip))
+        print(zipfile.ZipFile.namelist(myzip)) # check archive
     
     #upload zipped file to same S3 bucket
     s3_client.upload_file(archive, bucket_name, '%s.zip' % key)
