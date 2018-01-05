@@ -22,10 +22,10 @@ def lambda_handler(event, context):
     bucket_name = record['s3']['bucket']['name'] # bucket 
     key = record['s3']['object']['key'] # filename
     
-    tmp_dir = tempfile.gettempdir()
+    tmp_dir = tempfile.gettempdir() 
 
     # tmp_dir + filename
-    path = os.path.join(tempfile.gettempdir(), key)
+    path = os.path.join(tmp_dir, key)
     
     # move .py file from S3 to local lambda storage
     s3.Bucket(bucket_name).download_file(key, path)
