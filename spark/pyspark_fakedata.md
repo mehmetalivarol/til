@@ -1,4 +1,4 @@
-Here's how to create a fake dataset in Spark. More on [sc.parallelize](https://spark.apache.org/docs/2.1.1/programming-guide.html#parallelized-collections). 
+Here's how to create a small fake dataset for testing in PySpark. More on [sc.parallelize](https://spark.apache.org/docs/2.1.1/programming-guide.html#parallelized-collections). 
 
 ```python
 from pyspark.sql.session import SparkSession
