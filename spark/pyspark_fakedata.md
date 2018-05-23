@@ -5,6 +5,8 @@ from pyspark.sql.session import SparkSession
 rdd = sc.parallelize([(0,None), (0,1), (0,2), (1,2), (1,10), (1,20), (3,18), (3,18), (3,18)])
 df=rdd.toDF(['id','score'])
 df.show()
+```
+```
 +---+-----+
 | id|score|
 +---+-----+
@@ -18,7 +20,9 @@ df.show()
 |  3|   18|
 |  3|   18|
 +---+-----+
+```
 
+```
 df.printSchema()
 root
  |-- id: long (nullable = true)
@@ -36,6 +40,9 @@ import numpy as np
 rdd = sc.parallelize([(0,np.nan), (0,float(1)), (0,float(2)), (1,float(2)), (1,float(10)), (1,float(20)), (3,float(18)), (3,float(18)), (3,18)])
 df=rdd.toDF(['id','score'])
 df.show()
+```
+
+```
 +---+-----+
 | id|score|
 +---+-----+
